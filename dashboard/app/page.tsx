@@ -41,14 +41,14 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-8">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold mb-2">iMessage Agent</h1>
-        <p className="text-gray-400 mb-8">AI auto-responder for your iMessages</p>
+        <h1 className="text-3xl font-bold mb-2">Hinge Agent</h1>
+        <p className="text-gray-400 mb-8">AI auto-responder for your dating matches</p>
 
         <div className="bg-gray-900 rounded-2xl p-6 mb-6 flex items-center justify-between">
           <div>
             <h2 className="text-xl font-semibold">Agent Status</h2>
             <p className="text-gray-400 text-sm mt-1">
-              {isEnabled ? 'Auto-responding to allowlisted contacts' : 'Agent is paused'}
+              {isEnabled ? 'Auto-responding to your matches' : 'Agent is paused'}
             </p>
           </div>
           <button
@@ -67,7 +67,7 @@ export default function Dashboard() {
         {!warmupComplete && (
           <div className="bg-yellow-900/30 border border-yellow-700 rounded-xl p-4 mb-6">
             <p className="text-yellow-400 text-sm">
-              Complete the voice warmup before enabling the agent.{' '}
+              Complete the flirting warmup before enabling the agent.{' '}
               <Link href="/warmup" className="underline">Do it now</Link>
             </p>
           </div>
@@ -77,9 +77,9 @@ export default function Dashboard() {
           <Link href="/warmup" className="bg-gray-900 hover:bg-gray-800 rounded-xl p-5 transition-colors">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-semibold text-lg">Voice Warmup</h3>
+                <h3 className="font-semibold text-lg">Flirting Warmup</h3>
                 <p className="text-gray-400 text-sm mt-1">
-                  {warmupComplete ? 'Persona trained — click to update' : 'Train the bot to sound like you'}
+                  {warmupComplete ? 'Persona trained — click to update' : 'Teach the bot your flirting style'}
                 </p>
               </div>
               <span className="text-2xl">{warmupComplete ? '✓' : '⏳'}</span>
@@ -89,8 +89,8 @@ export default function Dashboard() {
           <Link href="/contacts" className="bg-gray-900 hover:bg-gray-800 rounded-xl p-5 transition-colors">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-semibold text-lg">Contact Allowlist</h3>
-                <p className="text-gray-400 text-sm mt-1">Choose who the agent responds to</p>
+                <h3 className="font-semibold text-lg">Match Allowlist</h3>
+                <p className="text-gray-400 text-sm mt-1">Choose which matches the agent responds to</p>
               </div>
               <span className="text-gray-400">→</span>
             </div>

@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 const CATEGORIES = [
-  { id: 'greeting', label: 'Greetings', prompt: 'How do you typically start a text conversation? (e.g. "yo", "heyyy", "what\'s good")' },
-  { id: 'humor', label: 'Humor', prompt: 'Give an example of something funny you\'d text a friend' },
-  { id: 'plans', label: 'Making plans', prompt: 'How would you text someone to make plans? (e.g. "yo u free tmrw?")' },
-  { id: 'reaction', label: 'Reactions', prompt: 'How do you react to surprising news over text?' },
-  { id: 'farewell', label: 'Signing off', prompt: 'How do you end a text conversation?' },
-  { id: 'agreement', label: 'Agreement', prompt: 'How do you say yes or agree over text?' },
-  { id: 'disagreement', label: 'Pushback', prompt: 'How do you disagree or push back in a text?' },
-  { id: 'filler', label: 'Random texts', prompt: 'Paste any random texts you\'d send to a friend — the more the better' },
+  { id: 'opener', label: 'Openers', prompt: 'How do you open a convo with a new match? (e.g. a witty comment about their profile, a smooth intro)' },
+  { id: 'flirty', label: 'Flirty lines', prompt: 'Give examples of flirty or teasing things you\'d text a match (e.g. "okay u might be trouble")' },
+  { id: 'banter', label: 'Banter / Humor', prompt: 'How do you joke around or keep things playful? Paste your best witty texts' },
+  { id: 'interest', label: 'Showing interest', prompt: 'How do you ask about someone or show you\'re into them? (e.g. "ok wait that\'s actually cool, how\'d u get into that")' },
+  { id: 'plans', label: 'Asking them out', prompt: 'How do you suggest meeting up? (e.g. "we should grab drinks this week" or something more creative)' },
+  { id: 'compliment', label: 'Compliments', prompt: 'How do you compliment someone without being corny? (e.g. "not gonna lie ur style is immaculate")' },
+  { id: 'deflect', label: 'Playing it cool', prompt: 'How do you play it cool or keep some mystery? (e.g. "guess you\'ll have to find out")' },
+  { id: 'filler', label: 'General texting style', prompt: 'Paste any other texts that show your vibe — the more the better' },
 ];
 
 type Example = {
@@ -104,10 +104,10 @@ export default function WarmupPage() {
     <div className="min-h-screen bg-gray-950 text-white p-8">
       <div className="max-w-2xl mx-auto">
         <button onClick={() => router.push('/')} className="text-gray-400 text-sm mb-6 hover:text-white">← Back</button>
-        <h1 className="text-3xl font-bold mb-2">Voice Warmup</h1>
+        <h1 className="text-3xl font-bold mb-2">Flirting Warmup</h1>
         <p className="text-gray-400 mb-8">
-          Give examples of how you actually text. The more you add, the more the bot will sound like you.
-          Aim for at least 10-15 examples across different categories.
+          Teach the bot how you flirt. Paste real texts you&apos;ve sent to matches, crushes, or dates.
+          The more examples you add, the better it&apos;ll sound like you. Aim for 10-15+.
         </p>
 
         {CATEGORIES.map(cat => (

@@ -28,14 +28,14 @@ export async function POST(req: NextRequest) {
       const response = await client.messages.create({
         model: 'claude-sonnet-4-6',
         max_tokens: 1000,
-        system: 'You are analyzing text message examples to build a communication profile. Be specific and analytical.',
+        system: 'You are analyzing text and flirting examples to build a dating communication profile. Be specific and analytical. Focus on what makes this person charming and attractive in conversation.',
         messages: [{
           role: 'user',
-          content: `Analyze these text message examples from one person and create a detailed communication profile. Return a JSON object with these exact fields:
-- summary: A paragraph describing how this person communicates
-- tone: A 2-4 word descriptor
-- quirks: An array of 5-10 specific behavioral quirks
-- sample_phrases: An array of 5-10 actual phrases this person uses
+          content: `Analyze these text/flirting examples from one person and create a detailed communication profile optimized for dating conversations. Return a JSON object with these exact fields:
+- summary: A paragraph describing how this person flirts and communicates with matches (writing style, personality, charm, humor style, energy)
+- tone: A 2-4 word descriptor (e.g. "playful, confident wit")
+- quirks: An array of 5-10 specific behavioral quirks relevant to dating convos (e.g. "teases with callbacks to earlier messages", "uses lowercase for casual confidence")
+- sample_phrases: An array of 5-10 actual phrases or words this person uses when flirting or texting matches
 
 Examples:
 ${examplesText}
