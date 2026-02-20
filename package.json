@@ -1,0 +1,22 @@
+{
+  "name": "imessage-agent",
+  "version": "1.0.0",
+  "description": "AI-powered iMessage auto-responder",
+  "main": "daemon/index.js",
+  "scripts": {
+    "daemon": "node daemon/index.js",
+    "dashboard": "cd dashboard && npm run dev",
+    "start": "concurrently \"npm run daemon\" \"npm run dashboard\"",
+    "setup": "node scripts/setup.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.76.0",
+    "better-sqlite3": "^12.6.2",
+    "concurrently": "^9.2.1",
+    "dotenv": "^17.3.1"
+  }
+}
